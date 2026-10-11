@@ -13,6 +13,7 @@ Next.js (App Router), React, TypeScript (strict), Tailwind CSS, Sanity CMS
 - Fetch content with GROQ via defineQuery; use Sanity TypeGen for types.
 - Prefer small, composable components in src/components.
 - No `any`. Keep accessibility in mind (semantic HTML, alt text, focus states).
+- Cache Components is enabled: don’t use dynamic, revalidate, or fetchCache route segment configs.
 
 ## Commands
 - npm run dev: start dev server (site + /studio)
