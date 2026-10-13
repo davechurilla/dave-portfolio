@@ -15,18 +15,13 @@ import {structure} from './sanity/structure'
 
 export default defineConfig({
   basePath: '/studio',
-  projectId: "wug0rr7v",
-  dataset: "production",
-  // Add and edit the content schema in the './sanity/schemaTypes' folder
-  schema, 
-  name: "dave-portfolio",
+  projectId,
+  dataset,
+  schema,
+  name: 'dave-portfolio',
   title: 'Dave Churilla Portfolio 2026',
-  
   plugins: [
     structureTool({structure}),
-    // Vision is for querying with GROQ from inside the Studio
-    // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
-    
   ],
 })
