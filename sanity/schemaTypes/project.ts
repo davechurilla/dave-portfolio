@@ -23,6 +23,18 @@ export const projectType = defineType({
       description: 'One or two sentences shown on cards and in search results.',
       validation: (rule) => rule.required().max(240),
     }),
+    defineField({
+      name: 'category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Websites', value: 'websites'},
+          {title: 'CRM Emails', value: 'crm-emails'},
+        ],
+        layout: 'radio',
+      },
+      validation: (rule) => rule.required(),
+    }),
     defineField({name: 'client', title: 'Client / Employer', type: 'string'}),
     defineField({name: 'role', type: 'string'}),
     defineField({

@@ -11,7 +11,7 @@ Next.js (App Router), React, TypeScript (strict), Tailwind CSS, Sanity CMS
 - Server Components by default; add "use client" only when needed.
 - Style with Tailwind only. No inline styles, no CSS-in-JS.
 - Fetch content with GROQ via defineQuery; use Sanity TypeGen for types.
-- Prefer small, composable components in src/components.
+- Prefer small, composable components in /components (project root, imported via the `@/components` alias).
 - No `any`. Keep accessibility in mind (semantic HTML, alt text, focus states).
 - Cache Components is enabled: don’t use dynamic, revalidate, or fetchCache route segment configs.
 
@@ -34,10 +34,18 @@ link or repo.
   `confidential` flag instead of requiring links.
 - Scaffolded with create-next-app (App Router, TypeScript, Tailwind) and npm.
   Sanity added via `sanity init` with next-sanity; Studio embedded at /studio.
-- Cache Components is enabled in next.config. Do NOT use `dynamic`, `revalidate`,
+- Cache Components
+ is enabled in next.config. Do NOT use `dynamic`, `revalidate`,
   or `fetchCache` route segment configs (they cause build errors).
-- Schemas in place: siteSettings, project, technology, experience.
+- Schemas in place: siteSettings, project (with `category`: websites | crm-emails), technology, experience.
+- Job title used site-wide: "Senior Web Developer" (not "Full Stack" yet; may change).
+- Pages built: home, /projects, /projects/[slug], /about, /contact (Resend server action).
+- Remaining: separate viewer-only Sanity browser token, Vercel deploy + Sanity webhook, OG images.
 - Sanity MCP server is configured (re-authorize via /mcp if it expires).
+- Tailwind v4 only (CSS-first config via @theme in globals.css). No MUI.
+- Mobile-first: default styles target phones, add sm:/md:/lg: overrides upward.
+- Use CSS Grid/Flex utilities for layout; test at phone, tablet, and desktop widths.
+- Always set `sizes` on next/image.
 
 ## Next steps
 1. Make siteSettings a singleton in the Studio structure.

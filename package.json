@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typegen": "sanity schema extract --enforce-required-fields --force && sanity typegen generate"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",
@@ -14,7 +15,8 @@
     "next": "16.4.0",
     "next-sanity": "^13.3.4",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "resend": "^6.34.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
