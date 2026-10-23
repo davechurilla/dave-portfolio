@@ -3,10 +3,6 @@ import {sanity} from 'next-sanity/live/cache-life'
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    agentFeedback: true,
-    agentUpgrade: 'security',
-  },
   cacheComponents: true,
   cacheLife: {default: sanity},
   partialPrefetching: true,
