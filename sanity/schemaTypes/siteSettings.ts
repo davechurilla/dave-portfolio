@@ -13,7 +13,7 @@ export const siteSettingsType = defineType({
     defineField({
       name: 'headline',
       type: 'string',
-      description: 'Hero headline, e.g. your title and specialty.',
+      description: 'Hero headline, e.g. "Senior Web Developer".',
     }),
     defineField({name: 'intro', type: 'text', rows: 3}),
     defineField({
